@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Notifications from './Notifications'
-import ProjectList from '../projects/ProjectList'
+import Notifications from './Notifications';
+import ProjectList from '../projects/ProjectList';
 import { compose } from 'redux';
-import { firestoreConnect } from 'react-redux-firebase'
+import { firestoreConnect } from 'react-redux-firebase';
 
 class Dashboard extends Component {
     render() {
