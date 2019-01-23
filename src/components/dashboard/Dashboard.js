@@ -38,7 +38,7 @@ const mapStateToProps = (state) => {
 export default compose(
     connect(mapStateToProps),
     firestoreConnect([
-        { collection: 'projects' }, // sync projects collection from Firestore into redux
-        { collection: 'notifications' },
+        { collection: 'projects', orderBy: ["createdAt", "desc"] }, // sync projects collection from Firestore into redux
+        { collection: 'notifications', limit: 3, orderBy: ["time", "desc"] },
     ]),
 )(Dashboard);
